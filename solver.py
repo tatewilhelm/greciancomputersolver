@@ -1,3 +1,4 @@
+# Rotor Values
 rotors = [
     [[3, 0, 6, 0, 10, 0, 7, 0, 15, 0, 8, 0]],
     [[12, 0, 4, 0, 7, 15, 0, 0, 14, 0, 9, 0,],
@@ -15,8 +16,11 @@ rotors = [
      [14, 11, 14, 11, 14, 11, 11, 14, 11, 14, 11, 14]]
 ]
 
+# If you want to change the starting offset, do it here
 offset = [0,0,0,0]
 cells = [0, 0, 0, 0, 0]
+
+# This function will go through each column and check if the sum in each is 42.
 def check():
     column = 0
     while column < 12:
@@ -44,6 +48,7 @@ def check():
             print(offset)
             return True
                     
+# Increments the offset 
 def increment():
     offset[0] += 1
     if offset[0] == 12:
@@ -58,12 +63,13 @@ def increment():
         
 
 
-
+# Run through
 solutionfound = False
 while solutionfound is False:
     a = check()
     if (offset[3] == 14):
-        print("cooked")
+        # Something is wrong with the code lol
+        print("uhoh")
         exit()
     if a is True:
         solutionfound = True
